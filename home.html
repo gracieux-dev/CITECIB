@@ -3,18 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+    <div class="main">
+        <header>
+            <div class="responsive-bar">
+                <div class="logo">
+                    <img src="" alt="logo"/>
+                </div>
+                <div class="menu">
+                    <h4>Menu</h4>
+                </div>
+            </div>
+            <nav>
+                <div class="logo">
+                    <img src="" alt="logo"/>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="nav-btn">
+
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+        </div>
+
+        <footer>
+
+        </footer>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }
+            else{
+                $('nav').removeClass('black');
+            }
+        })
+       /*menu button onclick function*/         
+        $(document).ready(function(){
+            $('.menu h4').click(function(){
+                $("nav ul").toggleClass("active")
+            })
+        })
+    </script>
 </body>
 </html>
