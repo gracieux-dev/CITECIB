@@ -6,7 +6,7 @@ body{
 .responsive-bar{
     display: none;
 }
-nav{
+nav{ 
     width: 100%;
     position: fixed;
     top: 0;
