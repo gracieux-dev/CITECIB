@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'Inscription</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="marg">
+        <img src="assets/img/marg.png" alt="" class="desktop">
+        <img src="assets/img/logo-m.png" alt="" class="mobile">
+    </div>
+    <div class="dock">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="">
+        </div>
+        <h1>Formulaire d'inscription aux Masterclasses et Formations</h1>
+        <div class="container">
+            <div class="content">
+                <form id="registrationForm">
+                    <h3>Informations Personnelles</h3>
+                    <div class="deux">
+                      <div class="form-group">
+                          <label for="name">Nom :</label>
+                          <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="surname">Prénom :</label>
+                          <input type="text" id="surname" name="surname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="phone">Numéro de Téléphone :</label>
+                        <input type="text" id="phone" name="phone" required>
+                      </div>
+                    <div class="deux">
+                      <div class="form-group">
+                          <label for="age">Âge :</label>
+                          <input type="number" id="age" name="age" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="gender">Genre :</label>
+                          <input type="text" id="gender" name="gender" required>
+                        </div>
+                    </div>
+                    <div class="deux">
+                      <div class="form-group">
+                          <label for="city">Ville :</label>
+                          <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="country">Pays :</label>
+                          <input type="text" id="country" name="country" required>
+                        </div>
+                    </div>
+                    
+                    <h3>Disponibilité</h3>
+                    <div class="form-group">
+                      <label for="availability">Êtes-vous disponible pendant toute la durée des cours ?</label>
+                      <select id="availability" name="availability" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="Yes">Oui</option>
+                        <option value="No">Non</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="experience">Avez-vous des expériences professionnelles dans le domaine du cinéma ou de l'audiovisuel ?</label>
+                      <select id="experience" name="experience" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="Yes">Oui</option>
+                        <option value="No">Non</option>
+                      </select>
+                    </div>
+                    <div class="form-group" id="experienceDetailsGroup" style="display:none;">
+                      <label for="experienceDetails">Veuillez décrire votre expérience :</label>
+                      <textarea id="experienceDetails" name="experienceDetails"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="studies">Avez-vous suivi des études en lien avec le cinéma, l’audiovisuel ou un domaine connexe ?</label>
+                      <select id="studies" name="studies" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="Yes">Oui</option>
+                        <option value="No">Non</option>
+                      </select>
+                    </div>
+                    <div class="form-group" id="studyDetailsGroup" style="display:none;">
+                      <label for="studyDetails">Veuillez préciser :</label>
+                      <textarea id="studyDetails" name="studyDetails"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="filmProject">Avez-vous déjà travaillé sur un projet de film ?</label>
+                      <select id="filmProject" name="filmProject" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="Yes">Oui</option>
+                        <option value="No">Non</option>
+                      </select>
+                    </div>
+                    <div class="form-group" id="filmDetailsGroup" style="display:none;">
+                      <label for="filmDetails">Veuillez préciser :</label>
+                      <textarea id="filmDetails" name="filmDetails"></textarea>
+                    </div>
+                    <h3>Aspirations </h3>
+                    <div class="form-group">
+                      <label for="interest">Pourquoi êtes-vous intéressé(e) par nos cours ?</label>
+                      <textarea id="interest" name="interest" required></textarea>
+                    </div>
+                    <h3>Choix du Cours</h3>
+                    
+                    <div class="form-group">
+                        <label for="courseType">Type de cours:</label>
+                        <select id="courseType" name="courseType" required>
+                          <option value="">Sélectionnez le type de cours</option>
+                          <option value="masterclass">Masterclass</option>
+                          <option value="formation">Formation</option>
+                        </select>
+                      </div>
+                      
+                      <div id="masterclassCoursesGroup" class="form-group" style="display:none;">
+                        <label for="masterclassCourses">Cours de Masterclass:</label>
+                        <select id="masterclassCourses" name="masterclassCourses">
+                          <option value="">Sélectionnez un cours</option>
+                          <option value="cinematography">Premier assistant réalisateur</option>
+                          <option value="editing">Script</option>
+                          <option value="soundDesign">Direction de production</option>
+                        </select>
+                      </div>
+                      
+                      <div id="formationCoursesGroup" class="form-group" style="display:none;">
+                        <label for="formationCourses">Cours de Formation:</label>
+                        <select id="formationCourses" name="formationCourses">
+                          <option value="">Sélectionnez un cours</option>
+                          <option value="scriptWriting">Administration de production</option>
+                          <option value="production">Electro plateau</option>
+                          <option value="directing">Costumière plateau</option>
+                          <option value="directing">Machiniste plateau</option>
+                          <option value="directing">Pointeur Caméra</option>
+                          <option value="directing">Son</option>
+                        </select>
+                      </div>
+                      
+                    <h3>Informations Supplémentaires</h3>
+                    <div class="form-group">
+                      <label for="specialNeeds">Avez-vous des besoins particuliers pour suivre le cours ?</label>
+                      <select id="specialNeeds" name="specialNeeds" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="Yes">Oui</option>
+                        <option value="No">Non</option>
+                      </select>
+                    </div>
+                    <div class="form-group" id="specialNeedsDetailsGroup" style="display:none;">
+                      <label for="specialNeedsDetails">Veuillez préciser :</label>
+                      <textarea id="specialNeedsDetails" name="specialNeedsDetails"></textarea>
+                    </div>
+                    <h3>Documents Supplémentaires</h3> 
+                    <div class="form-group">
+                      <label for="cv">Merci de joindre votre CV (optionnel mais recommandé) :</label>
+                      <input type="file" id="cv" name="cv">
+                    </div>
+                    <div class="form-group">
+                      <label for="references">Autres documents ou références (optionnel) :</label>
+                      <input type="file" id="references" name="references">
+                    </div>
+                    <button type="submit">Envoyer la candidature</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Nos partenaires</p>
+            <div class="part-img">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="marg">
+        <img src="assets/img/marg.png" alt="" class="desktop">
+        <img src="assets/img/logo-m.png" alt="" class="mobile">
+      </div>
+  </div>
+
+
+  <div id="popupModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Règles de Participation</h2>
+      <p>Veuillez lire et accepter les règles suivantes pour participer :</p>
+      <ul>
+        <li>Règle 1: Description de la première règle.</li>
+        <li>Règle 2: Description de la deuxième règle.</li>
+        <li>Règle 3: Description de la troisième règle.</li>
+      </ul>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="agreeRules" name="agreeRules" required>
+          J'ai lu et j'accepte les règles de participation.
+        </label>
+      </div>
+      <button id="submitFormBtn" disabled>Envoyer la candidature</button>
+    </div>
+  </div>
+
+  <!-- Popup de succès -->
+<div id="successModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-success">&times;</span>
+    <h2>Succès</h2>
+    <p>Votre candidature a été envoyée avec succès !</p>
+  </div>
+</div>
+
+
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "SRc-LKLrfX5nRiRyD",
+        });
+    })();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
