@@ -1,303 +1,93 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire d'Inscription</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
 </head>
 <body>
-  <div class="main">
-    <div class="marg">
-        <img src="assets/img/marg.png" alt="" class="desktop">
-        <img src="assets/img/logo-m.png" alt="" class="mobile">
-    </div>
-    <div class="dock">
-        <div class="logo">
-            <img src="assets/img/logo.png" alt="">
-        </div>
-        <h1>Formulaire d'inscription aux Masterclasses et Formations</h1>
+    <div class="main">
+        <header>
+            <div class="responsive-bar">
+                <div class="logo">
+                    <img src="" alt="logo"/>
+                </div>
+                <div class="menu">
+                    <h4>Menu</h4>
+                </div>
+            </div>
+            <nav>
+                <div class="logo">
+                    <img src="" alt="logo"/>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Formations</a></li>
+                    <li><a href="#">Editions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="nav-btn">
+                    <button>Partenariat</button>
+                    <button>Candidatez</button>
+                </div>
+            </nav>
+        </header>
         <div class="container">
-            <div class="content">
-                <form id="registrationForm">
-                    <h3>Informations Personnelles</h3>
-                    <div class="deux">
-                      <div class="form-group">
-                          <label for="name">Nom :</label>
-                          <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="surname">Prénom :</label>
-                          <input type="text" id="surname" name="surname" required>
+            <section class="hero">
+                <div class="hero-content">
+                    <img src="assets/img/hero.png" alt="">
+                    <div class="hero-text">
+                        <h1>Le Carrefour International Des Techniciens Cineastes Du Bénin</h1>
+                        <p>Le CITECIB est un cadre permanent qui fait découvrir les metiers invisible du cinema en mettant sous les projecteurs les techniciens et leurs œuvres.</p>
+                        <div class="hero-btn">
+                            <button>Nous contactez</button>
+                            <button>Nous Rejoindre</button>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="phone">Numéro de Téléphone :</label>
-                        <input type="text" id="phone" name="phone" required>
-                      </div>
-                    <div class="deux">
-                      <div class="form-group">
-                          <label for="age">Âge :</label>
-                          <input type="number" id="age" name="age" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="gender">Genre :</label>
-                          <input type="text" id="gender" name="gender" required>
-                        </div>
-                    </div>
-                    <div class="deux">
-                      <div class="form-group">
-                          <label for="city">Ville :</label>
-                          <input type="text" id="city" name="city" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="country">Pays :</label>
-                          <input type="text" id="country" name="country" required>
-                        </div>
-                    </div>
-                    
-                    <h3>Disponibilité</h3>
-                    <div class="form-group">
-                      <label for="availability">Êtes-vous disponible pendant toute la durée des cours ?</label>
-                      <select id="availability" name="availability" required>
-                        <option value="">Sélectionnez</option>
-                        <option value="Yes">Oui</option>
-                        <option value="No">Non</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="experience">Avez-vous des expériences professionnelles dans le domaine du cinéma ou de l'audiovisuel ?</label>
-                      <select id="experience" name="experience" required>
-                        <option value="">Sélectionnez</option>
-                        <option value="Yes">Oui</option>
-                        <option value="No">Non</option>
-                      </select>
-                    </div>
-                    <div class="form-group" id="experienceDetailsGroup" style="display:none;">
-                      <label for="experienceDetails">Veuillez décrire votre expérience :</label>
-                      <textarea id="experienceDetails" name="experienceDetails"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="studies">Avez-vous suivi des études en lien avec le cinéma, l’audiovisuel ou un domaine connexe ?</label>
-                      <select id="studies" name="studies" required>
-                        <option value="">Sélectionnez</option>
-                        <option value="Yes">Oui</option>
-                        <option value="No">Non</option>
-                      </select>
-                    </div>
-                    <div class="form-group" id="studyDetailsGroup" style="display:none;">
-                      <label for="studyDetails">Veuillez préciser :</label>
-                      <textarea id="studyDetails" name="studyDetails"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="filmProject">Avez-vous déjà travaillé sur un projet de film ?</label>
-                      <select id="filmProject" name="filmProject" required>
-                        <option value="">Sélectionnez</option>
-                        <option value="Yes">Oui</option>
-                        <option value="No">Non</option>
-                      </select>
-                    </div>
-                    <div class="form-group" id="filmDetailsGroup" style="display:none;">
-                      <label for="filmDetails">Veuillez préciser :</label>
-                      <textarea id="filmDetails" name="filmDetails"></textarea>
-                    </div>
-                    <h3>Aspirations </h3>
-                    <div class="form-group">
-                      <label for="interest">Pourquoi êtes-vous intéressé(e) par nos cours ?</label>
-                      <textarea id="interest" name="interest" required></textarea>
-                    </div>
-                    <h3>Choix du Cours</h3>
-                    
-                    <div class="form-group">
-                        <label for="courseType">Type de cours:</label>
-                        <select id="courseType" name="courseType" required>
-                          <option value="">Sélectionnez le type de cours</option>
-                          <option value="masterclass">Masterclass</option>
-                          <option value="formation">Formation</option>
-                        </select>
-                      </div>
-                      
-                      <div id="masterclassCoursesGroup" class="form-group" style="display:none;">
-                        <label for="masterclassCourses">Cours de Masterclass:</label>
-                        <select id="masterclassCourses" name="masterclassCourses">
-                          <option value="">Sélectionnez un cours</option>
-                          <option value="cinematography">Premier assistant réalisateur</option>
-                          <option value="editing">Script</option>
-                          <option value="soundDesign">Direction de production</option>
-                        </select>
-                      </div>
-                      
-                      <div id="formationCoursesGroup" class="form-group" style="display:none;">
-                        <label for="formationCourses">Cours de Formation:</label>
-                        <select id="formationCourses" name="formationCourses">
-                          <option value="">Sélectionnez un cours</option>
-                          <option value="scriptWriting">Administration de production</option>
-                          <option value="production">Electro plateau</option>
-                          <option value="directing">Costumière plateau</option>
-                          <option value="directing">Machiniste plateau</option>
-                          <option value="directing">Pointeur Caméra</option>
-                          <option value="directing">Son</option>
-                        </select>
-                      </div>
-                      
-                    <h3>Informations Supplémentaires</h3>
-                    <div class="form-group">
-                      <label for="specialNeeds">Avez-vous des besoins particuliers pour suivre le cours ?</label>
-                      <select id="specialNeeds" name="specialNeeds" required>
-                        <option value="">Sélectionnez</option>
-                        <option value="Yes">Oui</option>
-                        <option value="No">Non</option>
-                      </select>
-                    </div>
-                    <div class="form-group" id="specialNeedsDetailsGroup" style="display:none;">
-                      <label for="specialNeedsDetails">Veuillez préciser :</label>
-                      <textarea id="specialNeedsDetails" name="specialNeedsDetails"></textarea>
-                    </div>
-                    <h3>Documents Supplémentaires</h3> 
-                    <div class="form-group">
-                      <label for="cv">Merci de joindre votre CV (optionnel mais recommandé) :</label>
-                      <input type="file" id="cv" name="cv">
-                    </div>
-                    <div class="form-group">
-                      <label for="references">Autres documents ou références (optionnel) :</label>
-                      <input type="file" id="references" name="references">
-                    </div>
-                    <button type="submit">Envoyer la candidature</button>
-                </form>
-            </div>
+                </div>
+            </section>
+            <section>
+                <h2>Les intentions et motivation du <span>CITECIB</span></h2>
+                <div class="about-content">
+                    <img src="" alt="">
+                    <p>Le CITECIB est un projet novateur dans le paysage cinématographique du Bénin qui s’adresse prioritairement aux professionnels du cinéma tels que les techniciens, les créateurs, les artistes, cachés dans l’ombre de la fabrication des oeuvres cinématographiques. Ils représentent une grande partie de la chaîne de fabrication et aussi un multitude d’emplois dans divers domaines dont la mission première ici, est de faire rêver les cinéphiles dans les salles de cinéma et sur les petits écrans des téléviseurs. Ces acteurs de l’ombre dans la chaîne de production cinématographique, ces professionnels dont l’expertise est prouvée au plan national et international, méritent en notre égard, une forte promotion pour perpétuer la relève de leurs métiers et une sincère gratitude pour leur engagement au service du cinéma béninois et africain.</p>
+                    <img src="" alt="">
+                </div>
+            </section>
+            <section class="partenaires">
+
+            </section>
+            <section>
+                
+            </section>
+            <section></section>
+            <section></section>
         </div>
-        <div class="footer">
-            <div class="link">
-              <a href="#">Politiques de confidentialité</a>
-              <a href="#">Règles Génerale d'utilisation des données</a>
-            </div>
-            <div class="dabm">
-              <p>Copyright @2024 - Réaliser par DABM Sarl</p>
-            </div>
-        </div>
+
+        <footer>
+
+        </footer>
     </div>
-    <div class="marg">
-        <img src="assets/img/marg.png" alt="" class="desktop">
-        <img src="assets/img/logo-m.png" alt="" class="mobile">
-      </div>
-  </div>
 
 
-  <div id="popupModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Règles de Participation</h2>
-      <p style="font-style: italic;">Veuillez lire et accepter les règles suivantes pour participer :</p>
-      <div class="intro">
-        <p>L'Organisation est une entité dédiée à la promotion des métiers du cinéma et de l’audiovisuel à travers des cours de formation gratuits, incluant des Masterclasses et des Formations pratiques, dans le but de développer les compétences des participants pour leur permettre de réussir dans cette industrie. 
-  
-          Les cours sont destinés à un groupe de participants sélectionnés à la suite d'un appel à candidature, en fonction de leurs qualifications et motivations. 
-            
-          L'Organisation souhaite formaliser les relations avec les Apprenants sélectionnés, d'où les présentes conditions générales. 
-          </p>
-      </div>
-      <ul>
-        <li>
-          <h5>ARTICLE 1 : VALEUR DE L'EXPOSÉ PRÉALABLE ET DES ANNEXES </h5>
-          <P>L'exposé préalable ci-dessus, l'appel à candidature, et tout document annexe font partie intégrante des présentes conditions générales et ont la même valeur juridique pour leur interprétation et leur exécution. </P>
-        </li>
-        <li>
-          <h5>ARTICLE 2 : OBJET   </h5>
-          <P>Les présentes conditions générales ont pour objet de définir les droits et obligations respectifs des Parties pendant toute la durée des cours ainsi que leurs suites. </P>
-        </li>
-        <li>
-          <h5>ARTICLE 3 : DURÉE - CALENDRIER   </h5>
-          <p>Les cours se dérouleront sur une période de [Durée], selon un calendrier qui sera communiqué aux Apprenants. </p>
-        </li>
-        <li>
-          <h5>ARTICLE 4 : OBLIGATIONS DES PARTIES  </h5>
-          <p><span>4.1. Obligations de l'Apprenant :</span>   <br>
-            ●	L'Apprenant devra scrupuleusement respecter les obligations suivantes :   <br>
-            ●	Suivre avec assiduité l’ensemble du cours pour lequel il/elle a été sélectionné(e) et participer activement aux activités y afférentes.  <br> 
-            ●	Être présent(e) aux sessions en ligne et/ou présentielles prévues dans le cadre des cours.   <br>
-            ●	Respecter les consignes des formateurs et de l'équipe de coordination.   <br>
-            ●	Faire preuve de discipline et de courtoisie vis-à-vis des autres participants et des formateurs.   <br>
-            ●	Justifier toute absence aux sessions, sauf en cas de force majeure.   <br>
-            ●	Veiller à la bonne utilisation du matériel mis à disposition et signaler tout dysfonctionnement. <br>
-              
-            <span>4.2. Obligations de l'Organisation :  </span>
-            L'Organisation s'engage à :   <br>
-            ●	Assurer la qualité et le bon déroulement des cours.   <br>
-            ●	Mettre à disposition les moyens matériels nécessaires au bon déroulement des cours.   <br>
-            ●	 Délivrer une attestation de participation à l'issue des cours pour les Apprenants assidus. <br>
-             </p>
-        </li>
-        <li>
-          <h5>ARTICLE 5 : MODE DE DÉROULEMENT DES COURS   </h5>
-          <p>Les cours seront dispensés selon un mode hybride, combinant des sessions en ligne et en présentiel, selon le calendrier communiqué aux Apprenants </p>
-        </li>
-        <li>
-          <h5>ARTICLE 6 : ASSIDUITÉ ET RESPONSABILITÉ DE L'APPRENANT    </h5>
-          <p>Le contrôle de l’assiduité et de la participation active sera effectué par des moyens appropriés, incluant l’utilisation d’outils technologiques pour les sessions en ligne. Le manque d’assiduité ou la non-participation active peut entraîner des conséquences telles que la non-délivrance de l’attestation de participation, ou l'exclusion du programme. 
-          </p>
-        </li>
-        <li>
-          <h5>ARTICLE 7 : TRAITEMENT DES DONNÉES À CARACTÈRE PERSONNEL   </h5>
-          <p>Les données personnelles collectées seront traitées dans le respect des dispositions légales en vigueur. L'Apprenant dispose d'un droit d'accès, de rectification, et de suppression des données le concernant </p>
-        </li>
-         <li>
-          <h5>ARTICLE 8 : DROIT D'IMAGE   </h5>
-          <p>L'Apprenant autorise l'Organisation à utiliser son image captée pendant les cours à des fins de communication sur tous supports, en respectant la vie privée et la réputation de l'Apprenant. </p>
-        </li>
-         <li>
-          <h5>ARTICLE 9 : PROPRIÉTÉ INTELLECTUELLE ET CONFIDENTIALITÉ   </h5>
-          <p>Les contenus produits par l'Apprenant durant les cours resteront la propriété de l'Organisation, qui peut les utiliser pour promouvoir le programme. Les Parties s'engagent à respecter la confidentialité des informations échangées.  </p>
-        </li>
-         <li>
-          <h5>ARTICLE 10 : FRAUDE   </h5>
-          <p>Toute tentative de fraude entraînera l'exclusion immédiate du programme et l'annulation des avantages accordés. </p>
-        </li>
-         <li>
-          <h5>ARTICLE 11 : RÈGLEMENT DES LITIGES   </h5>
-          <p>Tout différend sera résolu à l'amiable entre les Parties. En cas d'échec, le litige sera soumis aux juridictions compétentes conformément aux lois en vigueur dans le pays de l'Organisation.  </p>
-        </li>
-        <li>
-          <h5>ARTICLE 12 : ÉLECTION DE DOMICILE </h5>
-          <p>Pour l'exécution des présentes, les Parties élisent domicile à leurs adresses respectives mentionnées ci-dessus. </p>
-        </li>
-      </ul>
-      <div class="form-group">
-        <label>
-          <input type="checkbox" id="agreeRules" name="agreeRules" required>
-          J'ai lu et j'accepte les règles de participation.
-        </label>
-      </div>
-      <button id="submitFormBtn" disabled>Envoyer</button>
-    </div>
-  </div>
-
-  <!-- Popup de succès -->
-  <div id="successModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="close-success">&times;</span>
-      <div class="s-head">
-        <img src="assets/img/check.png" alt="">
-        <h2>Succès</h2>
-      </div>
-      <p>Votre candidature a été envoyée avec succès !</p>
-    </div>
-  </div>
-
-
-  <script type="text/javascript"
-          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init({
-          publicKey: "SRc-LKLrfX5nRiRyD",
-        });
-    })();
-  </script>
-  <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }
+            else{
+                $('nav').removeClass('black');
+            }
+        })
+       /*menu button onclick function*/         
+        $(document).ready(function(){
+            $('.menu h4').click(function(){
+                $("nav ul").toggleClass("active")
+            })
+        })
+    </script>
 </body>
 </html>

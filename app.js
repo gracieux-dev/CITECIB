@@ -98,17 +98,63 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
+  const cvFile = document.getElementById('cv').files[0];
+    const referencesFile = document.getElementById('references').files[0];
+
+    const accessToken = 'YOUR_DROPBOX_ACCESS_TOKEN';
+
+    // Function to upload file to Dropbox
+    function uploadFileToDropbox(file) {
+        return fetch('https://content.dropboxapi.com/2/files/upload', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'Dropbox-API-Arg': JSON.stringify({
+                    path: `/uploads/${file.name}`,
+                    mode: 'add',
+                    autorename: true,
+                    mute: false
+                }),
+                'Content-Type': 'application/octet-stream'
+            },
+            body: file
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.path_display) {
+                return `https://www.dropbox.com/home${data.path_display}?dl=1`;
+            } else {
+                throw new Error('File upload failed');
+            }
+        });
+    }
+
+    // Handle uploads and form submission
+    Promise.all([
+        cvFile ? uploadFileToDropbox(cvFile) : Promise.resolve(''),
+        referencesFile ? uploadFileToDropbox(referencesFile) : Promise.resolve('')
+    ])
+    .then(([cvLink, referencesLink]) => {
+        formData.cvLink = cvLink;
+        formData.referencesLink = referencesLink;
+        sendFormData(formData);
+    })
+    .catch(error => {
+        alert('File upload failed: ' + error.message);
+    });
+});
+
   // Function to send form data via EmailJS
-  function sendFormData(formData) {
-      emailjs.send('service_h53g0j5', 'template_6vr3nud', formData)
-          .then(function () {
-              popupModal.style.display = "none"; // Hide the rules modal
-              successModal.style.display = "block"; // Show the success modal
-              registrationForm.reset(); // Reset the form after successful submission
-          }, function (error) {
-              alert('Une erreur est survenue lors de l\'envoi du formulaire: ' + JSON.stringify(error));
-          });
-  }
+//   function sendFormData(formData) {
+//       emailjs.send('service_h53g0j5', 'template_6vr3nud', formData)
+//           .then(function () {
+//               popupModal.style.display = "none"; // Hide the rules modal
+//               successModal.style.display = "block"; // Show the success modal
+//               registrationForm.reset(); // Reset the form after successful submission
+//           }, function (error) {
+//               alert('Une erreur est survenue lors de l\'envoi du formulaire: ' + JSON.stringify(error));
+//           });
+//   }
 
   // Handle success modal close
   document.querySelector(".close-success").onclick = function () {
